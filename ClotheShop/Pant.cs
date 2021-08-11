@@ -10,8 +10,9 @@ namespace ClotheShop
     {
         private bool pantType;
 
-        private Pant(bool pantType = false)
+        public Pant(bool quality, bool pantType = false)
         {
+            base.quality = quality;
             this.pantType = pantType;
         }
 

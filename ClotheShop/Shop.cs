@@ -10,9 +10,9 @@ namespace ClotheShop
     {
         private String name;
         private String direction;
-        private List<Garment> listGarments;
+        public List<Garment> listGarments;
 
-        private Shop(String name, String direction)
+        public Shop(String name, String direction)
         {
             this.name = name;
             this.direction = direction;

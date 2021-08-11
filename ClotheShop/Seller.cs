@@ -12,7 +12,7 @@ namespace ClotheShop
         private String lastName;
         private int codS;
 
-        private Seller(String name, String lastName, int codS)
+        public Seller(String name, String lastName, int codS)
         {
             this.name = name;
             this.lastName = lastName;

@@ -11,8 +11,9 @@ namespace ClotheShop
         private bool sleeveType;
         private bool collarType;
 
-        private Shirt(bool sleeveType = false, bool collarType = false)
+        public Shirt(bool quality, bool sleeveType = false, bool collarType = false)
         {
+            base.quality = quality;
             this.sleeveType = sleeveType;
             this.collarType = collarType;
         }

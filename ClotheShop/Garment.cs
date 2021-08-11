@@ -10,15 +10,14 @@ namespace ClotheShop
     {
         protected bool quality;
         protected float price;
-        protected int stock;
+        protected static int stock;
 
-        protected Garment() { }
-        protected Garment(float price, int stock, bool quality = false)
+       protected Garment()
         {
-            this.quality = quality;
-            this.price = price;
-            this.stock = stock;
+            stock = 1000;
+            price = 1500;
         }
+  
 
         protected abstract float CheckPrice();
 
