@@ -12,14 +12,20 @@ namespace ClotheShop
         protected float price;
         protected static int stock;
 
-       protected Garment()
+        protected Garment()
         {
             stock = 1000;
             price = 1500;
         }
-  
 
-        protected abstract float CheckPrice();
+        protected void CheckQuality()
+        {
+            if (quality)
+            {
+                price = price + (30 * price / 100);
+            }
+        }
+        protected abstract void CheckPrice();
 
     }
 }

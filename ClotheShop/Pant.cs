@@ -14,11 +14,16 @@ namespace ClotheShop
         {
             base.quality = quality;
             this.pantType = pantType;
+            CheckPrice();
         }
 
-        protected override float CheckPrice()
+        protected override void CheckPrice()
         {
-            return (0);
+            CheckQuality();
+            if (pantType)
+            {
+                price = price - (12 * price / 100);
+            }
         }
     }
 }

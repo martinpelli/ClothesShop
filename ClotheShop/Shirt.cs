@@ -16,10 +16,20 @@ namespace ClotheShop
             base.quality = quality;
             this.sleeveType = sleeveType;
             this.collarType = collarType;
+            CheckPrice();
         }
-        protected override float CheckPrice()
+        protected override void CheckPrice()
         {
-            return (0);
+            CheckQuality();
+            if (sleeveType)
+            {
+                price = price - (10 * price / 100);
+            }
+            if (collarType)
+            {
+                price = price + (3 * price / 100);
+            }
+
         }
     }
 }
