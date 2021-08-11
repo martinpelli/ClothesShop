@@ -8,7 +8,7 @@ namespace ClotheShop
 {
     class Record
     {
-        private List<Quotation> quotations = new List<Quotation>();
+        private List<QuotationForm> quotations = new List<QuotationForm>();
 
         
     }

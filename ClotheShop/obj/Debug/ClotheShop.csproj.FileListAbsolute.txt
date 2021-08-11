@@ -1,0 +1,10 @@
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\bin\Debug\ClotheShop.exe.config
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\bin\Debug\ClotheShop.exe
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\bin\Debug\ClotheShop.pdb
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.csproj.AssemblyReference.cache
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.Form1.resources
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.Properties.Resources.resources
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.csproj.GenerateResource.cache
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.csproj.CoreCompileInputs.cache
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.exe
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.pdb
