@@ -14,7 +14,6 @@ namespace ClotheShop
         {
             base.quality = quality;
             this.pantType = pantType;
-            CheckPrice();
         }
 
         protected override void CheckPrice()

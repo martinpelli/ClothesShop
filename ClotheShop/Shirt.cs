@@ -16,7 +16,6 @@ namespace ClotheShop
             base.quality = quality;
             this.sleeveType = sleeveType;
             this.collarType = collarType;
-            CheckPrice();
         }
         protected override void CheckPrice()
         {

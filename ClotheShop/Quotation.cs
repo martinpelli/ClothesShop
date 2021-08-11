@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClotheShop
 {
-    class Cotization
+    class Quotation
     {
         private int id;
         private DateTime dateTime;
@@ -15,7 +15,7 @@ namespace ClotheShop
         private int amount;
         private float outcome;
 
-        private Cotization(int id, DateTime dateTime, int codS, Garment garment, int amount, float outcome)
+        private Quotation(int id, DateTime dateTime, int codS, Garment garment, int amount, float outcome)
         {
             this.amount = amount;
             this.codS = codS;

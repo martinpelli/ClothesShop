@@ -15,7 +15,7 @@ namespace ClotheShop
         protected Garment()
         {
             stock = 1000;
-            price = 1500;
+            price = 0;
         }
 
         protected void CheckQuality()
