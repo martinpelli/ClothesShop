@@ -31,7 +31,7 @@ namespace ClotheShop
         {
             this.CotizadorExpress = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.quoteTextBox = new System.Windows.Forms.TextBox();
             this.priceLabel = new System.Windows.Forms.Label();
             this.vSeparator = new System.Windows.Forms.Label();
             this.hTopSeparator = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@ namespace ClotheShop
             this.premiumRadioButton = new System.Windows.Forms.RadioButton();
             this.standardRadioButton = new System.Windows.Forms.RadioButton();
             this.stockGroup = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.stockTextBox = new System.Windows.Forms.TextBox();
             this.stockLabel = new System.Windows.Forms.Label();
             this.garmentsGroup = new System.Windows.Forms.GroupBox();
             this.maoCollarCheckBox = new System.Windows.Forms.CheckBox();
@@ -84,7 +84,7 @@ namespace ClotheShop
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.quoteTextBox);
             this.panel1.Controls.Add(this.priceLabel);
             this.panel1.Controls.Add(this.vSeparator);
             this.panel1.Controls.Add(this.hTopSeparator);
@@ -104,15 +104,15 @@ namespace ClotheShop
             this.panel1.Size = new System.Drawing.Size(717, 689);
             this.panel1.TabIndex = 1;
             // 
-            // textBox2
+            // quoteTextBox
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(373, 574);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(235, 38);
-            this.textBox2.TabIndex = 2;
+            this.quoteTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.quoteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quoteTextBox.Location = new System.Drawing.Point(373, 574);
+            this.quoteTextBox.Name = "quoteTextBox";
+            this.quoteTextBox.ReadOnly = true;
+            this.quoteTextBox.Size = new System.Drawing.Size(235, 38);
+            this.quoteTextBox.TabIndex = 2;
             // 
             // priceLabel
             // 
@@ -193,6 +193,7 @@ namespace ClotheShop
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(66, 23);
             this.amountTextBox.TabIndex = 2;
+            this.amountTextBox.TextChanged += new System.EventHandler(this.amountTextBox_TextChanged);
             // 
             // priceTextBox
             // 
@@ -200,6 +201,7 @@ namespace ClotheShop
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(66, 23);
             this.priceTextBox.TabIndex = 1;
+            this.priceTextBox.TextChanged += new System.EventHandler(this.priceTextBox_TextChanged);
             // 
             // groupBox1
             // 
@@ -236,10 +238,11 @@ namespace ClotheShop
             this.standardRadioButton.TabStop = true;
             this.standardRadioButton.Text = "Standard";
             this.standardRadioButton.UseVisualStyleBackColor = true;
+            this.standardRadioButton.CheckedChanged += new System.EventHandler(this.standardRadioButton_CheckedChanged);
             // 
             // stockGroup
             // 
-            this.stockGroup.Controls.Add(this.textBox1);
+            this.stockGroup.Controls.Add(this.stockTextBox);
             this.stockGroup.Controls.Add(this.stockLabel);
             this.stockGroup.Location = new System.Drawing.Point(79, 304);
             this.stockGroup.Name = "stockGroup";
@@ -247,13 +250,13 @@ namespace ClotheShop
             this.stockGroup.TabIndex = 8;
             this.stockGroup.TabStop = false;
             // 
-            // textBox1
+            // stockTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(171, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(59, 20);
-            this.textBox1.TabIndex = 1;
+            this.stockTextBox.Location = new System.Drawing.Point(171, 29);
+            this.stockTextBox.Name = "stockTextBox";
+            this.stockTextBox.ReadOnly = true;
+            this.stockTextBox.Size = new System.Drawing.Size(59, 20);
+            this.stockTextBox.TabIndex = 1;
             // 
             // stockLabel
             // 
@@ -289,6 +292,7 @@ namespace ClotheShop
             this.maoCollarCheckBox.TabIndex = 9;
             this.maoCollarCheckBox.Text = "Cuello Mao";
             this.maoCollarCheckBox.UseVisualStyleBackColor = true;
+            this.maoCollarCheckBox.CheckedChanged += new System.EventHandler(this.maoCollarCheckBox_CheckedChanged);
             // 
             // pantTypeCheckBox
             // 
@@ -299,6 +303,7 @@ namespace ClotheShop
             this.pantTypeCheckBox.TabIndex = 8;
             this.pantTypeCheckBox.Text = "Chupín";
             this.pantTypeCheckBox.UseVisualStyleBackColor = true;
+            this.pantTypeCheckBox.CheckedChanged += new System.EventHandler(this.pantTypeCheckBox_CheckedChanged);
             // 
             // shortSleeveCheckBox
             // 
@@ -309,6 +314,7 @@ namespace ClotheShop
             this.shortSleeveCheckBox.TabIndex = 7;
             this.shortSleeveCheckBox.Text = "Manga Corta";
             this.shortSleeveCheckBox.UseVisualStyleBackColor = true;
+            this.shortSleeveCheckBox.CheckedChanged += new System.EventHandler(this.shortSleeveCheckBox_CheckedChanged);
             // 
             // pantRadiobutton
             // 
@@ -333,6 +339,7 @@ namespace ClotheShop
             this.shirtRadioButton.TabStop = true;
             this.shirtRadioButton.Text = "Camisa";
             this.shirtRadioButton.UseVisualStyleBackColor = true;
+            this.shirtRadioButton.CheckedChanged += new System.EventHandler(this.shirtRadioButton_CheckedChanged);
             // 
             // quoteButton
             // 
@@ -417,7 +424,6 @@ namespace ClotheShop
             this.MaximumSize = new System.Drawing.Size(687, 780);
             this.Name = "QuotationForm";
             this.Text = "Cotizador Express";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.priceGroup.ResumeLayout(false);
@@ -458,12 +464,12 @@ namespace ClotheShop
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton premiumRadioButton;
         private System.Windows.Forms.RadioButton standardRadioButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox stockTextBox;
         private System.Windows.Forms.Label stockLabel;
         private System.Windows.Forms.Label hBottomSeparator;
         private System.Windows.Forms.Label vSeparator;
         private System.Windows.Forms.Label hTopSeparator;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox quoteTextBox;
         private System.Windows.Forms.Label priceLabel;
     }
 }

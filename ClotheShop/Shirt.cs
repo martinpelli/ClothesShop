@@ -11,13 +11,16 @@ namespace ClotheShop
         private bool sleeveType;
         private bool collarType;
 
+        public  bool SleeveType { get => sleeveType; }
+        public bool CollarType { get => collarType;  }
+
         public Shirt(bool quality, bool sleeveType = false, bool collarType = false)
         {
             base.quality = quality;
             this.sleeveType = sleeveType;
             this.collarType = collarType;
         }
-        protected override void CheckPrice()
+        public override float CheckPrice()
         {
             CheckQuality();
             if (sleeveType)
@@ -28,6 +31,7 @@ namespace ClotheShop
             {
                 price = price + (3 * price / 100);
             }
+            return price;
 
         }
     }

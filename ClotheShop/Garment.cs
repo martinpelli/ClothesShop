@@ -10,22 +10,26 @@ namespace ClotheShop
     {
         protected bool quality;
         protected float price;
-        protected static int stock;
+        protected static int stock = 1000;
 
+        public static int Stock { get => stock; set => stock = value; }
+        public float Price { get => price; set => price = value; }
+
+        public bool Quality { get => quality; }
         protected Garment()
         {
-            stock = 1000;
+            
             price = 0;
         }
 
         protected void CheckQuality()
         {
-            if (quality)
+            if (!quality)
             {
                 price = price + (30 * price / 100);
             }
         }
-        protected abstract void CheckPrice();
+        public abstract float CheckPrice();
 
     }
 }
