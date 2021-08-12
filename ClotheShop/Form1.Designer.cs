@@ -55,9 +55,9 @@ namespace ClotheShop
             this.shirtRadioButton = new System.Windows.Forms.RadioButton();
             this.quoteButton = new System.Windows.Forms.Button();
             this.records = new System.Windows.Forms.LinkLabel();
-            this.direction = new System.Windows.Forms.Label();
+            this.shopDirection = new System.Windows.Forms.Label();
             this.shopName = new System.Windows.Forms.Label();
-            this.codSeller = new System.Windows.Forms.Label();
+            this.sellerCod = new System.Windows.Forms.Label();
             this.sellerName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.priceGroup.SuspendLayout();
@@ -95,15 +95,14 @@ namespace ClotheShop
             this.panel1.Controls.Add(this.garmentsGroup);
             this.panel1.Controls.Add(this.quoteButton);
             this.panel1.Controls.Add(this.records);
-            this.panel1.Controls.Add(this.direction);
+            this.panel1.Controls.Add(this.shopDirection);
             this.panel1.Controls.Add(this.shopName);
-            this.panel1.Controls.Add(this.codSeller);
+            this.panel1.Controls.Add(this.sellerCod);
             this.panel1.Controls.Add(this.sellerName);
             this.panel1.Location = new System.Drawing.Point(-23, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(717, 689);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox2
             // 
@@ -194,7 +193,6 @@ namespace ClotheShop
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(66, 23);
             this.amountTextBox.TabIndex = 2;
-            this.amountTextBox.TextChanged += new System.EventHandler(this.amountTextBox_TextChanged);
             // 
             // priceTextBox
             // 
@@ -225,7 +223,6 @@ namespace ClotheShop
             this.premiumRadioButton.TabIndex = 11;
             this.premiumRadioButton.Text = "Premium";
             this.premiumRadioButton.UseVisualStyleBackColor = true;
-            this.premiumRadioButton.CheckedChanged += new System.EventHandler(this.premiumRadioButton_CheckedChanged);
             // 
             // standardRadioButton
             // 
@@ -249,7 +246,6 @@ namespace ClotheShop
             this.stockGroup.Size = new System.Drawing.Size(554, 70);
             this.stockGroup.TabIndex = 8;
             this.stockGroup.TabStop = false;
-            this.stockGroup.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBox1
             // 
@@ -283,7 +279,6 @@ namespace ClotheShop
             this.garmentsGroup.TabIndex = 7;
             this.garmentsGroup.TabStop = false;
             this.garmentsGroup.Text = "Prenda";
-            this.garmentsGroup.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // maoCollarCheckBox
             // 
@@ -294,7 +289,6 @@ namespace ClotheShop
             this.maoCollarCheckBox.TabIndex = 9;
             this.maoCollarCheckBox.Text = "Cuello Mao";
             this.maoCollarCheckBox.UseVisualStyleBackColor = true;
-            this.maoCollarCheckBox.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // pantTypeCheckBox
             // 
@@ -368,17 +362,16 @@ namespace ClotheShop
             this.records.TabStop = true;
             this.records.Text = "Historial Cotizaciones";
             // 
-            // direction
+            // shopDirection
             // 
-            this.direction.AutoSize = true;
-            this.direction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direction.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.direction.Location = new System.Drawing.Point(510, 9);
-            this.direction.Name = "direction";
-            this.direction.Size = new System.Drawing.Size(172, 17);
-            this.direction.TabIndex = 3;
-            this.direction.Text = "Dirección de la Tienda";
-            this.direction.Click += new System.EventHandler(this.direction_Click);
+            this.shopDirection.AutoSize = true;
+            this.shopDirection.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shopDirection.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.shopDirection.Location = new System.Drawing.Point(510, 9);
+            this.shopDirection.Name = "shopDirection";
+            this.shopDirection.Size = new System.Drawing.Size(172, 17);
+            this.shopDirection.TabIndex = 3;
+            this.shopDirection.Text = "Dirección de la Tienda";
             // 
             // shopName
             // 
@@ -391,17 +384,16 @@ namespace ClotheShop
             this.shopName.TabIndex = 2;
             this.shopName.Text = "Nombre Tienda";
             // 
-            // codSeller
+            // sellerCod
             // 
-            this.codSeller.AutoSize = true;
-            this.codSeller.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codSeller.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.codSeller.Location = new System.Drawing.Point(247, 46);
-            this.codSeller.Name = "codSeller";
-            this.codSeller.Size = new System.Drawing.Size(126, 17);
-            this.codSeller.TabIndex = 1;
-            this.codSeller.Text = "Código Vendeedor";
-            this.codSeller.Click += new System.EventHandler(this.label1_Click_1);
+            this.sellerCod.AutoSize = true;
+            this.sellerCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellerCod.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.sellerCod.Location = new System.Drawing.Point(247, 46);
+            this.sellerCod.Name = "sellerCod";
+            this.sellerCod.Size = new System.Drawing.Size(126, 17);
+            this.sellerCod.TabIndex = 1;
+            this.sellerCod.Text = "Código Vendeedor";
             // 
             // sellerName
             // 
@@ -413,7 +405,6 @@ namespace ClotheShop
             this.sellerName.Size = new System.Drawing.Size(189, 17);
             this.sellerName.TabIndex = 0;
             this.sellerName.Text = "Nombre y Apellido Vendedor";
-            this.sellerName.Click += new System.EventHandler(this.label1_Click);
             // 
             // QuotationForm
             // 
@@ -447,8 +438,8 @@ namespace ClotheShop
         private System.Windows.Forms.Label CotizadorExpress;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label sellerName;
-        private System.Windows.Forms.Label codSeller;
-        private System.Windows.Forms.Label direction;
+        private System.Windows.Forms.Label sellerCod;
+        private System.Windows.Forms.Label shopDirection;
         private System.Windows.Forms.Label shopName;
         private System.Windows.Forms.LinkLabel records;
         private System.Windows.Forms.GroupBox garmentsGroup;

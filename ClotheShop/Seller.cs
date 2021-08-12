@@ -18,5 +18,10 @@ namespace ClotheShop
             this.lastName = lastName;
             this.codS = codS;
         }
+
+        public String Name { get => name; }
+        public String LastName { get => lastName; }
+
+        public int CodS { get => codS; }
     }
 }

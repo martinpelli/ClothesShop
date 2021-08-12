@@ -12,6 +12,9 @@ namespace ClotheShop
         private String direction;
         public List<Garment> listGarments;
 
+        public String Name { get => name; }
+        public String Direction { get => direction; }
+
         public Shop(String name, String direction)
         {
             this.name = name;
