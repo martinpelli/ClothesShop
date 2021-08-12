@@ -54,7 +54,7 @@ namespace ClotheShop
             this.pantRadiobutton = new System.Windows.Forms.RadioButton();
             this.shirtRadioButton = new System.Windows.Forms.RadioButton();
             this.quoteButton = new System.Windows.Forms.Button();
-            this.records = new System.Windows.Forms.LinkLabel();
+            this.recordsLabelLink = new System.Windows.Forms.LinkLabel();
             this.shopDirection = new System.Windows.Forms.Label();
             this.shopName = new System.Windows.Forms.Label();
             this.sellerCod = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@ namespace ClotheShop
             this.panel1.Controls.Add(this.stockGroup);
             this.panel1.Controls.Add(this.garmentsGroup);
             this.panel1.Controls.Add(this.quoteButton);
-            this.panel1.Controls.Add(this.records);
+            this.panel1.Controls.Add(this.recordsLabelLink);
             this.panel1.Controls.Add(this.shopDirection);
             this.panel1.Controls.Add(this.shopName);
             this.panel1.Controls.Add(this.sellerCod);
@@ -357,17 +357,18 @@ namespace ClotheShop
             this.quoteButton.UseVisualStyleBackColor = false;
             this.quoteButton.Click += new System.EventHandler(this.quoteButton_Click);
             // 
-            // records
+            // recordsLabelLink
             // 
-            this.records.AutoSize = true;
-            this.records.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.records.LinkColor = System.Drawing.Color.DarkOrchid;
-            this.records.Location = new System.Drawing.Point(539, 46);
-            this.records.Name = "records";
-            this.records.Size = new System.Drawing.Size(143, 17);
-            this.records.TabIndex = 4;
-            this.records.TabStop = true;
-            this.records.Text = "Historial Cotizaciones";
+            this.recordsLabelLink.AutoSize = true;
+            this.recordsLabelLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recordsLabelLink.LinkColor = System.Drawing.Color.DarkOrchid;
+            this.recordsLabelLink.Location = new System.Drawing.Point(539, 46);
+            this.recordsLabelLink.Name = "recordsLabelLink";
+            this.recordsLabelLink.Size = new System.Drawing.Size(143, 17);
+            this.recordsLabelLink.TabIndex = 4;
+            this.recordsLabelLink.TabStop = true;
+            this.recordsLabelLink.Text = "Historial Cotizaciones";
+            this.recordsLabelLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.recordsLabelLink_LinkClicked);
             // 
             // shopDirection
             // 
@@ -424,6 +425,7 @@ namespace ClotheShop
             this.MaximumSize = new System.Drawing.Size(687, 780);
             this.Name = "QuotationForm";
             this.Text = "Cotizador Express";
+            this.Load += new System.EventHandler(this.QuotationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.priceGroup.ResumeLayout(false);
@@ -447,7 +449,7 @@ namespace ClotheShop
         private System.Windows.Forms.Label sellerCod;
         private System.Windows.Forms.Label shopDirection;
         private System.Windows.Forms.Label shopName;
-        private System.Windows.Forms.LinkLabel records;
+        private System.Windows.Forms.LinkLabel recordsLabelLink;
         private System.Windows.Forms.GroupBox garmentsGroup;
         private System.Windows.Forms.RadioButton shirtRadioButton;
         private System.Windows.Forms.Button quoteButton;

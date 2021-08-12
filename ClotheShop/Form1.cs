@@ -21,7 +21,7 @@ namespace ClotheShop
         private bool typePant = false;
         private float price = 0;
         private int amount = 0;
-        private Record record = new Record();
+        private int id = 0;
 
         public QuotationForm()
         {
@@ -38,22 +38,22 @@ namespace ClotheShop
 
 
 
-            if (amount == 0 || price == 0)
+            if (amount <= 0 || price <= 0)
             {
                 MessageBox.Show("El precio o la cantidad no pueden ser 0");
             }
-            else// if (shop.ListGarments.Remove(removeGarment))
+            else
             {
                 List<Garment> removeGarments = new List<Garment>();
-                List<Quotation> newQuotations = new List<Quotation>();
                 bool noFound = false;
                 int from = 0;
                 float totalOutcome = 0;
+                Garment newGarment = null;
                 for (int i = 0; i < amount; i++)
                 {
                     float outcome = 0;
                     var garments = CheckStock(from);
-                    Garment newGarment = garments.Item1;
+                    newGarment = garments.Item1;
                     Garment originalGarment = garments.Item2;
                     from = garments.Item3 + 1;
                     newGarment.Price = price;
@@ -68,7 +68,6 @@ namespace ClotheShop
                     else
                     {
                         //Las prendas que se encuentran se van añadiendo a las listas
-                        newQuotations.Add(new Quotation(1000 - Garment.Stock, DateTime.Now, seller.CodS, newGarment, amount, outcome));
                         removeGarments.Add(originalGarment);
                     }
          
@@ -84,13 +83,14 @@ namespace ClotheShop
                     //si todas las prendas se encontraron entonces ahora sí las elimino y las guardo en el historial
                     for (int i = 0; i < amount; i++)
                     {
-                        record.Quotations.Add(newQuotations[i]);
-                        
-                        
+                        shop.ListGarments.Remove(removeGarments[i]);
+
                     }
+                    Record.Quotations.Add(new Quotation(id, DateTime.Now, seller.CodS, newGarment, amount, totalOutcome));
                     Garment.Stock -= amount;
                     stockTextBox.Text = Garment.Stock.ToString();
                     quoteTextBox.Text = totalOutcome.ToString();
+                    id += 1;
                 }
             }
 
@@ -340,6 +340,17 @@ namespace ClotheShop
                 amountTextBox.Text = "";
                 amountTextBox.TextChanged += amountTextBox_TextChanged;
             }
+        }
+
+        private void recordsLabelLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void QuotationForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

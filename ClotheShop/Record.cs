@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClotheShop
 {
-    class Record
+    static class Record
     {
-        private List<Quotation> quotations = new List<Quotation>();
+        private static List<Quotation> quotations = new List<Quotation>();
 
-        public  List<Quotation> Quotations { get => quotations; }
+        public  static List<Quotation> Quotations { get => quotations; }
     }
 }

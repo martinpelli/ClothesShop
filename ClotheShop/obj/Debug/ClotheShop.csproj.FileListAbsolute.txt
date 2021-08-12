@@ -8,3 +8,4 @@ C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\Cloth
 C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.exe
 C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.pdb
 C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.QuotationForm.resources
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Debug\ClotheShop.Form2.resources
