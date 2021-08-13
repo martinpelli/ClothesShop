@@ -425,7 +425,6 @@ namespace ClotheShop
             this.MaximumSize = new System.Drawing.Size(687, 780);
             this.Name = "QuotationForm";
             this.Text = "Cotizador Express";
-            this.Load += new System.EventHandler(this.QuotationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.priceGroup.ResumeLayout(false);

@@ -40,7 +40,8 @@ namespace ClotheShop
 
             if (amount <= 0 || price <= 0)
             {
-                MessageBox.Show("El precio o la cantidad no pueden ser 0");
+                MessageBox.Show("El precio o la cantidad no pueden ser 0 o estar vacío");
+                clearTextBox();
             }
             else
             {
@@ -94,8 +95,9 @@ namespace ClotheShop
                 }
             }
 
-                
-            
+
+
+
 
 
         }
@@ -317,9 +319,7 @@ namespace ClotheShop
             catch 
             {
                 MessageBox.Show("Ingrese un número válido");
-                priceTextBox.TextChanged -= priceTextBox_TextChanged;
-                priceTextBox.Text = "";
-                priceTextBox.TextChanged += priceTextBox_TextChanged;
+                clearTextBox();
 
             }                
             
@@ -336,9 +336,7 @@ namespace ClotheShop
             catch
             {
                 MessageBox.Show("Ingrese un número válido");
-                amountTextBox.TextChanged += amountTextBox_TextChanged;
-                amountTextBox.Text = "";
-                amountTextBox.TextChanged += amountTextBox_TextChanged;
+                clearTextBox();
             }
         }
 
@@ -348,9 +346,16 @@ namespace ClotheShop
             form2.Show();
         }
 
-        private void QuotationForm_Load(object sender, EventArgs e)
+        private void clearTextBox()
         {
-
+            amountTextBox.TextChanged -= amountTextBox_TextChanged;
+            priceTextBox.TextChanged -= priceTextBox_TextChanged;
+            amountTextBox.Text = "";
+            priceTextBox.Text = "";
+            price = 0;
+            amount = 0;
+            priceTextBox.TextChanged += priceTextBox_TextChanged;
+            amountTextBox.TextChanged += amountTextBox_TextChanged;
         }
     }
 }
