@@ -1,0 +1,11 @@
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\bin\Release\ClotheShop.exe.config
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\bin\Release\ClotheShop.exe
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\bin\Release\ClotheShop.pdb
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Release\ClotheShop.csproj.AssemblyReference.cache
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Release\ClotheShop.QuotationForm.resources
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Release\ClotheShop.Form2.resources
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Release\ClotheShop.Properties.Resources.resources
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Release\ClotheShop.csproj.GenerateResource.cache
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Release\ClotheShop.csproj.CoreCompileInputs.cache
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Release\ClotheShop.exe
+C:\Users\marti\OneDrive\Desktop\ClotheShop\ClotheShop\ClotheShop\obj\Release\ClotheShop.pdb
